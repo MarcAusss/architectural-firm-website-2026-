@@ -2,6 +2,7 @@ import Image from "next/image";
 import Landing from "./components/landing";
 import About from "./components/about";
 import Services from "./components/services";
+import Function from "./components/function";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <Landing/>
         <About/>
         <Services/>
+        <Function/>
       </main>
     </div>
   );
