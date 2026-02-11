@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/sub-components/navbar";
 import Footer from "./components/sub-components/footer";
-import { montserrat } from "./fonts";
+import { playfair } from "./fonts";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${montserrat.variable}`}>
+    <html lang="en" className={`${playfair.className}`}>
       <body
         className={`antialiased`}
       >  
