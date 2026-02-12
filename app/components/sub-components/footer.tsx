@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Footer() {
     return (
-        <div className="">
+        <footer className="" id="footer">
             <div className="">
                 <div className="relative h-[50vh] w-full bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('/images/renewal-energy-solar-and-wind-for-web.jpg')", }}>
                     <div className="bg-linear-to-b from-[#5c8fff]/50 to-transparent p-5 rounded-b-xl h-full flex items-center flex-col justify-center">
@@ -68,6 +68,6 @@ export default function Footer() {
                     <Link href="" className=''>Compliance</Link>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 }

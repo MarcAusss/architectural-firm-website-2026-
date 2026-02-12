@@ -19,19 +19,19 @@ export default function Home() {
           <Services/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16">
+        <div className="mx-auto max-w-340 my-16 h-screen" id="function">
           <Function/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16">
+        <div className="mx-auto max-w-340 my-16 h-screen">
           <Team/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16">
+        <div className="mx-auto max-w-340 my-16 h-screen">
           <Testimonials/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16">
+        <div className="mx-auto max-w-340 my-16 h-screen">
           <Faq/>
         </div>
       </main>
