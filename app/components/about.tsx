@@ -48,7 +48,7 @@ export default function About() {
         
         {/* Image */}
         <div
-          className="h-72 md:h-[460px] rounded-2xl bg-cover bg-center"
+          className="h-72 md:h-115 rounded-2xl bg-cover bg-center"
           style={{
             backgroundImage:
               "url('/images/two-business-mature-women-sitting-couch-office-talking-discussing-work_116407-30442.avif')",
@@ -93,7 +93,7 @@ export default function About() {
             key={index}
             className="relative bg-white border-t-2 border-[#c0b9b254] py-6 px-2 group transition-all duration-300"
           >
-            <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#474441] group-hover:w-full transition-all duration-300"></div>
+            <div className="absolute top-0 left-0 h-0.5 w-0 bg-[#474441] group-hover:w-full transition-all duration-300"></div>
 
             <div className="text-sm bg-[#F0E6DE] p-3 rounded-md inline-block mb-4">
               <i className={feature.iconClass}></i>

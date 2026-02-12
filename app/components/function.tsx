@@ -34,7 +34,7 @@ export default function Function() {
           {[1, 2, 3].map((step, index) => (
             <div
               key={index}
-              className="bg-[#47444163] backdrop-blur-md rounded-xl p-8 flex flex-col justify-between min-h-[260px]"
+              className="bg-[#47444163] backdrop-blur-md rounded-xl p-8 flex flex-col justify-between min-h-65"
             >
               <div className="w-10 h-10 bg-[#88837d98] flex items-center justify-center rounded-md text-lg mb-6">
                 0{step}

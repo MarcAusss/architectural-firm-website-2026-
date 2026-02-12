@@ -41,7 +41,7 @@ export default function Services() {
           },
         ].map((service, index) => (
           <div key={index} className="rounded-xl">
-            <div className="relative h-72 md:h-[420px]">
+            <div className="relative h-72 md:h-105">
               <Image
                 src={service.image}
                 fill

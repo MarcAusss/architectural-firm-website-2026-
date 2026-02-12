@@ -46,7 +46,7 @@ export default function Team() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
         {members.map((member, index) => (
           <div key={index} className="rounded-xl">
-            <div className="relative h-72 md:h-[460px]">
+            <div className="relative h-72 md:h-115">
               <Image
                 src={member.image}
                 fill
