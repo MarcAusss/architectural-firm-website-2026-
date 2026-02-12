@@ -6,11 +6,11 @@ import { montserrat } from "../../fonts";
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
-  const [isFunctionSection, setIsFunctionSection] = useState(false);
-  const [isFooter, setIsFooter] = useState(false);
+    const [isFunctionSection, setIsFunctionSection] = useState(false);
+    const [isFooter, setIsFooter] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
+    useEffect(() => {
+        const handleScroll = () => {
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         const docHeight = document.body.scrollHeight;
@@ -25,32 +25,40 @@ export default function Navbar() {
             setIsFunctionSection(scrollY + 80 >= sectionTop && scrollY + 80 < sectionBottom);
         }
 
-        // Very bottom detection
-        setIsFooter(scrollY + windowHeight >= docHeight);
-    };
+        // Very bottom detection (reliable)
+        const isAtBottom = scrollY + windowHeight >= docHeight - 5;
+        setIsFooter(isAtBottom);
+        };
 
-    window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Determine navbar background
+    // Background color
     let bgColor = "transparent";
     if (isFunctionSection) {
-        bgColor = "white";
+        bgColor = "white"; // Function section
     } else if (scrolled) {
-        bgColor = "#35261e";
+        bgColor = "#35261e"; // Scrolled normal
     }
 
-    // Determine navbar width
-    let navbarWidth = scrolled ? "w-[90%]" : "w-full";
-    if (isFooter) navbarWidth = "w-full rounded-none !mt-0";
+    // Navbar width and rounding
+    let navbarClasses = "";
+    if (isFunctionSection || isFooter) {
+        navbarClasses = "w-full rounded-none !mt-0 px-10 py-3"; // Full width for function & footer
+    } else {
+        navbarClasses = scrolled
+        ? "w-[90%] mt-3 rounded-full px-10 py-3"
+        : "w-full rounded-full px-20 py-5";
+    }
 
     // Text color
     const textColor = isFunctionSection ? "text-black" : "text-white";
 
 
+
     return (
-        <div className={` fixed top-0 z-30 mx-auto left-0 right-0 transition-all duration-500 ease-in-out rounded-full ${scrolled ? "px-10 py-3 mt-3" : "px-20 py-5"} ${navbarWidth} `} style={{ backgroundColor: bgColor,}}>
+        <div className={`fixed top-0 z-30 mx-auto left-0 right-0 transition-all duration-500 ease-in-out ${navbarClasses}`} style={{ backgroundColor: bgColor }}>
             <div className={`flex justify-between items-center ${textColor} ${montserrat.className}`}>
                 <div className="w-[10%]"></div>
                 <div className="flex gap-8 items-center">

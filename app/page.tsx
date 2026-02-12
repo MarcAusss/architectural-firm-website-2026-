@@ -15,23 +15,23 @@ export default function Home() {
           <About/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16">
+        <div className="mx-auto max-w-340 my-16 mb-32">
           <Services/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16 h-screen" id="function">
+        <div className="h-screen" id="function">
           <Function/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16 h-screen">
+        <div className="mx-auto max-w-340 my-16">
           <Team/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16 h-screen">
+        <div className="mx-auto max-w-340 my-16">
           <Testimonials/>
         </div>
 
-        <div className="mx-auto max-w-340 my-16 h-screen">
+        <div className="mx-auto max-w-340 my-16">
           <Faq/>
         </div>
       </main>
