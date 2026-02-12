@@ -5,6 +5,7 @@ import Function from "./components/function";
 import Team from "./components/team";
 import Testimonials from "./components/testimonials";
 import Faq from "./components/faq";
+import SubFooter from "./components/sub-components/sub-footer";
 
 export default function Home() {
   return (
@@ -33,6 +34,10 @@ export default function Home() {
 
         <div className="mx-auto max-w-340 my-16">
           <Faq/>
+        </div>
+
+        <div className="">
+          <SubFooter/>
         </div>
       </main>
     </div>

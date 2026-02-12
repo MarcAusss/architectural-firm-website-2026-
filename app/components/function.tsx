@@ -19,26 +19,26 @@ export default function Function() {
                         <h1 className="w-5 h-5 rounded-sm bg-[#88837d98] flex items-center justify-center p-4 text-lg">01</h1>
                         <div className="">
                             <h1 className="text-3xl mb-4">Free Consultation</h1>
-                            <p className="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ducimus eaque repudiandae iste illo odit optio iusto molestiae, quis distinctio?</p>
+                            <p className={`${montserrat.className}`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ducimus eaque repudiandae iste illo odit optio iusto molestiae, quis distinctio?</p>
                         </div>
                     </div>
                     <div className="bg-[#47444163] w-full h-87.5 backdrop-blur-md rounded-xl flex flex-col justify-between p-8">
                         <h1 className="w-5 h-5 rounded-sm bg-[#88837d98] flex items-center justify-center p-4 text-lg">01</h1>
                         <div className="">
                             <h1 className="text-3xl mb-4">Free Consultation</h1>
-                            <p className="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ducimus eaque repudiandae iste illo odit optio iusto molestiae, quis distinctio?</p>
+                            <p className={`${montserrat.className}`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ducimus eaque repudiandae iste illo odit optio iusto molestiae, quis distinctio?</p>
                         </div>
                     </div>
                     <div className="bg-[#47444163] w-full h-87.5 backdrop-blur-md rounded-xl flex flex-col justify-between p-8">
                         <h1 className="w-5 h-5 rounded-sm bg-[#88837d98] flex items-center justify-center p-4 text-lg">01</h1>
                         <div className="">
                             <h1 className="text-3xl mb-4">Free Consultation</h1>
-                            <p className="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ducimus eaque repudiandae iste illo odit optio iusto molestiae, quis distinctio?</p>
+                            <p className={`${montserrat.className}`}>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum ducimus eaque repudiandae iste illo odit optio iusto molestiae, quis distinctio?</p>
                         </div>
                     </div>
                 </div>
                 <div className="text-center">
-                    <button className="px-5 py-2 bg-white text-black rounded-full w-[10%]">
+                    <button className={`${montserrat.className} px-5 py-2 bg-white text-black text-sm rounded-full cursor-pointer`}>
                         Contact
                     </button>
                 </div>
