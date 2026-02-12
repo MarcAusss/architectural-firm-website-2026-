@@ -8,14 +8,21 @@ import { montserrat } from "../fonts";
 const testimonials = [
   {
     quote:
-      "\"I struggled with accident-related \ntrauma for two years. Healora's program and \nincredible therapists guided me through the \nhealing process and helped me feel whole \nagain.\"",
+      `"I struggled with accident-related 
+trauma for two years. Healora's program and 
+incredible therapists guided me through the 
+healing process and helped me feel whole 
+again."`,
     name: "Aaron Mitchell",
     location: "Florida, United States",
     image: "/images/blog-3-1024x682.jpg",
   },
   {
     quote:
-      "Therapy helped me regain confidence \nand emotional strength after years of silent \nbattles. I finally feel balanced and \nhopeful again.",
+      `Therapy helped me regain confidence 
+and emotional strength after years of silent 
+battles. I finally feel balanced and 
+hopeful again.`,
     name: "Samantha Lee",
     location: "California, United States",
     image: "/images/blog-3-1024x682.jpg",
@@ -28,37 +35,40 @@ export default function Testimonials() {
   const next = () => setIndex((prev) => (prev + 1) % testimonials.length);
 
   const prev = () =>
-    setIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
 
   const current = testimonials[index];
 
-  // Split once for performance
   const lines = useMemo(() => current.quote.split("\n"), [current]);
 
   return (
-    <div className="py-20">
+    <div className="py-16 md:py-20 px-6 md:px-0">
       {/* Top Label */}
       <div className="flex items-center gap-2 mb-6 text-sm">
         <span>♦</span>
         <p className={montserrat.className}>Testimonials</p>
       </div>
 
-      {/* Title Row */}
-      <div className="flex justify-between items-start mb-16">
-        <h1 className="text-5xl font-serif leading-tight">
+      {/* Title Section */}
+      <div className="flex flex-col md:flex-row justify-between items-start gap-6 md:gap-0 mb-12 md:mb-16">
+        <h1 className="text-3xl md:text-5xl font-serif leading-tight">
           Real Stories From Our Patients
         </h1>
 
-        <p className={`${montserrat.className} text-sm text-gray-600 max-w-xs`}>
+        <p
+          className={`${montserrat.className} text-sm text-gray-600 max-w-full md:max-w-xs`}
+        >
           Read heartfelt experiences shared by patients who found comfort,
           clarity, and support through our care.
         </p>
       </div>
 
       {/* Main Content */}
-      <div className="flex justify-between items-center gap-28">
+      <div className="flex flex-col md:flex-row justify-between items-center gap-10 md:gap-28">
         {/* LEFT IMAGE */}
-        <div className="w-[28%] relative h-80 rounded-xl overflow-hidden">
+        <div className="w-full md:w-[28%] relative h-64 md:h-80 rounded-xl overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -79,9 +89,9 @@ export default function Testimonials() {
         </div>
 
         {/* RIGHT CONTENT */}
-        <div className="w-[62%] min-w-0">
+        <div className="w-full md:w-[62%] min-w-0">
           {/* Quote */}
-          <h1 className="text-4xl font-serif leading-relaxed mb-8">
+          <h1 className="text-2xl md:text-4xl font-serif leading-relaxed mb-6 md:mb-8">
             <AnimatePresence mode="wait">
               <motion.span
                 key={index}
@@ -93,12 +103,11 @@ export default function Testimonials() {
               >
                 {lines.map((line, lineIndex) => {
                   const words = line.split(" ");
-                  const half = Math.ceil(words.length / 2);
 
                   return (
                     <div
                       key={lineIndex}
-                      className={lineIndex === 0 ? "ml-[10%]" : ""}
+                      className={lineIndex === 0 ? "md:ml-[10%]" : ""}
                     >
                       {words.map((word, i) => (
                         <motion.span
@@ -109,9 +118,7 @@ export default function Testimonials() {
                             delay: i * 0.03,
                             duration: 0.4,
                           }}
-                          className={`mr-1 ${
-                            i < half ? "text-gray-900" : "text-gray-900"
-                          }`}
+                          className="mr-1 text-gray-900 inline-block"
                         >
                           {word}
                         </motion.span>
@@ -123,11 +130,13 @@ export default function Testimonials() {
             </AnimatePresence>
           </h1>
 
-          {/* Name + Arrows Row */}
-          <div className="flex justify-between items-center">
+          {/* Name + Controls */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-0">
             <div>
               <h1 className="font-semibold text-lg">{current.name}</h1>
-              <p className={`${montserrat.className} text-sm text-gray-500`}>
+              <p
+                className={`${montserrat.className} text-sm text-gray-500`}
+              >
                 {current.location}
               </p>
             </div>
