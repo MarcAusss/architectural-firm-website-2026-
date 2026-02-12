@@ -11,12 +11,29 @@ export default function Home() {
     <div className="">
       <main className="">
         <Landing/>
-        <About/>
-        <Services/>
-        <Function/>
-        <Team/>
-        <Testimonials/>
-        <Faq/>
+        <div className="mx-auto max-w-340 my-16">
+          <About/>
+        </div>
+
+        <div className="mx-auto max-w-340 my-16">
+          <Services/>
+        </div>
+
+        <div className="mx-auto max-w-340 my-16">
+          <Function/>
+        </div>
+
+        <div className="mx-auto max-w-340 my-16">
+          <Team/>
+        </div>
+
+        <div className="mx-auto max-w-340 my-16">
+          <Testimonials/>
+        </div>
+
+        <div className="mx-auto max-w-340 my-16">
+          <Faq/>
+        </div>
       </main>
     </div>
   );
