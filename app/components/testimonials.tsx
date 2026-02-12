@@ -19,10 +19,10 @@ again."`,
   },
   {
     quote:
-      `Therapy helped me regain confidence 
+      `"Therapy helped me regain confidence 
 and emotional strength after years of silent 
 battles. I finally feel balanced and 
-hopeful again.`,
+hopeful again."`,
     name: "Samantha Lee",
     location: "California, United States",
     image: "/images/blog-3-1024x682.jpg",
