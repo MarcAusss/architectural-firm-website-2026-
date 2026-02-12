@@ -25,13 +25,13 @@ const features = [
 export default function About() {
     return (
         <>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-start">
                 <div className="flex items-center gap-2 font-semibold">
                     <i className="fa-solid fa-diamond"></i>
                     <p className={`${montserrat.className}`}>About Us</p>
                 </div>
 
-                <h1 className="text-4xl">
+                <h1 className="text-4xl mb-5">
                     Feel Supported as you regain {" "}
                     <span className="text-gray-500">
                         calm, <br /> build confidence, and create real <br /> progress in your life.

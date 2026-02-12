@@ -1,10 +1,16 @@
 import Form from 'next/form'
 import Link from 'next/link'
+import { montserrat  } from "../../fonts";
+
 
 export default function Footer() {
     return (
-        <footer className="" id="footer">
-            <div className="mt-5 py-5 flex justify-between max-w-7xl mx-auto">
+        <footer className="max-w-345 mx-auto" id="footer">
+            <div className="flex justify-between items-end py-8 border-b border-gray-300">
+                <h1 className="text-5xl">Your journey to mental <br /> wellness starts here</h1>
+                <p className={`${montserrat.className} text-sm`}>We make the process clear and comfortable so you can <br /> focus on healing without stress. Our process gives you <br /> clarity, confidence, and structure.</p>
+            </div>
+            <div className="mt-5 py-5 flex justify-between">
                 <div className="w-[30%]">
                     <h1 className="font-bold text-xl mb-2">Greenova</h1>
                     <p className="text-sm font-semibold mb-2">Subscribe</p>
@@ -46,8 +52,8 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="max-w-7xl mx-auto flex justify-between border-t-2 py-3 border-gray-300">
-                <p className="text-gray-400">© 2026 Greenova, All rights reserved.</p>
+            <div className="max-w-345 mx-auto flex justify-between border-t py-3 border-gray-300">
+                <p className="text-gray-400">© 2026 Company, All rights reserved.</p>
                 <div className="flex gap-5">
                     <Link href="" className='border-r pr-5 border-gray-400'>Terms of Services</Link>
                     <Link href="" className='border-r pr-5 border-gray-400'>Privacy Policy</Link>
